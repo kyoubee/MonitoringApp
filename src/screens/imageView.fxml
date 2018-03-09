@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.image.*?>
+<?import java.lang.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane maxHeight="337.0" maxWidth="600.0" minHeight="337.0" minWidth="600.0" prefHeight="337.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <HBox maxHeight="337.0" maxWidth="600.0" minHeight="337.0" minWidth="600.0" prefHeight="337.0" prefWidth="600.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <ImageView fx:id="imgCanvas" pickOnBounds="true" preserveRatio="true" HBox.hgrow="SOMETIMES">
+               <viewport>
+                  <Rectangle2D />
+               </viewport>
+               <HBox.margin>
+                  <Insets />
+               </HBox.margin>
+            </ImageView>
+         </children>
+      </HBox>
+   </children>
+</AnchorPane>

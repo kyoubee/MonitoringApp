@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import javafx.scene.canvas.*?>
+<?import javafx.scene.text.*?>
+<?import customControls.listView.*?>
+<?import customControls.comboBox.*?>
+<?import customControls.googleMap.*?>
+<?import javafx.scene.shape.*?>
+<?import com.lynden.gmapsfx.*?>
+<?import javafx.scene.chart.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane cacheHint="QUALITY" maxHeight="200.0" maxWidth="480.0" minHeight="200.0" minWidth="480.0" prefHeight="200.0" prefWidth="480.0" style="-fx-border-width: 5;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <BorderPane layoutX="-100.0" layoutY="-152.0" prefHeight="200.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <top>
+            <MenuBar BorderPane.alignment="CENTER">
+               <menus>
+                  <Menu mnemonicParsing="false" text="File">
+                     <items>
+                        <MenuItem fx:id="mniAddUser" mnemonicParsing="false" text="New User" />
+                        <SeparatorMenuItem mnemonicParsing="false" />
+                        <MenuItem fx:id="mniClose" mnemonicParsing="false" onAction="#closeStage" text="Quit" />
+                     </items>
+                  </Menu>
+                  <Menu mnemonicParsing="false" text="Help">
+                     <items>
+                        <MenuItem mnemonicParsing="false" text="About" />
+                     </items>
+                  </Menu>
+               </menus>
+            </MenuBar>
+         </top>
+         <center>
+            <VBox alignment="CENTER" prefHeight="182.0" prefWidth="480.0" BorderPane.alignment="CENTER">
+               <children>
+                  <Label text="Realtime Drainage Monitoring Dashboard" textFill="#3a3480">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+                  <Region prefHeight="10.0" prefWidth="480.0" />
+                  <HBox alignment="CENTER" spacing="10.0">
+                     <children>
+                        <VBox alignment="CENTER">
+                           <children>
+                              <HBox>
+                                 <children>
+                                    <Label fx:id="lblMessage1" alignment="TOP_LEFT" />
+                                 </children>
+                              </HBox>
+                              <HBox alignment="CENTER" maxHeight="87.0" maxWidth="87.0" minHeight="87.0" minWidth="87.0" prefHeight="87.0" prefWidth="87.0" spacing="10.0" style="-fx-border-color: grey; -fx-border-radius: 10;">
+                                 <padding>
+                                    <Insets bottom="10.0" left="5.0" right="5.0" top="10.0" />
+                                 </padding>
+                                 <children>
+                                    <ImageView fitHeight="80.0" fitWidth="80.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../../lib/flooding-house.png" />
+                                       </image>
+                                    </ImageView>
+                                 </children>
+                              </HBox>
+                              <HBox>
+                                 <children>
+                                    <Label alignment="TOP_LEFT" />
+                                 </children>
+                              </HBox>
+                           </children>
+                        </VBox>
+                        <VBox alignment="CENTER">
+                           <children>
+                              <HBox>
+                                 <children>
+                                    <Label fx:id="lblMessage" alignment="TOP_LEFT" />
+                                 </children>
+                              </HBox>
+                              <HBox alignment="CENTER" spacing="10.0" style="-fx-border-color: grey; -fx-border-radius: 10;">
+                                 <children>
+                                    <VBox alignment="CENTER_RIGHT" spacing="15.0">
+                                       <children>
+                                          <Label alignment="CENTER_RIGHT" text="User :" />
+                                          <Label layoutX="10.0" layoutY="10.0" text="Password :" />
+                                       </children>
+                                    </VBox>
+                                    <VBox alignment="CENTER_LEFT" layoutX="10.0" layoutY="10.0" spacing="15.0">
+                                       <children>
+                                          <TextField fx:id="txtUser" promptText="Username" text="admin" />
+                                          <PasswordField fx:id="txtPassword" promptText="Password" text="admin" />
+                                       </children>
+                                    </VBox>
+                                    <Button fx:id="btnLogin" mnemonicParsing="false" onAction="#showPrimary" text="Log In" />
+                                 </children>
+                                 <padding>
+                                    <Insets bottom="10.0" left="5.0" right="5.0" top="10.0" />
+                                 </padding>
+                              </HBox>
+                              <HBox>
+                                 <children>
+                                    <Label alignment="TOP_LEFT" />
+                                 </children>
+                              </HBox>
+                           </children>
+                        </VBox>
+                     </children>
+                  </HBox>
+               </children>
+            </VBox>
+         </center>
+      </BorderPane>
+   </children>
+</AnchorPane>

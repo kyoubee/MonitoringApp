@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import customControls.listView.*?>
+<?import customControls.comboBox.*?>
+<?import customControls.googleMap.*?>
+<?import javafx.scene.shape.*?>
+<?import com.lynden.gmapsfx.*?>
+<?import javafx.scene.chart.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="540.0" prefWidth="960.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <BorderPane layoutX="-100.0" layoutY="-152.0" prefHeight="200.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <top>
+            <MenuBar BorderPane.alignment="CENTER">
+               <menus>
+                  <Menu mnemonicParsing="false" text="File">
+                     <items>
+                        <MenuItem mnemonicParsing="false" text="New" />
+                        <SeparatorMenuItem mnemonicParsing="false" />
+                        <MenuItem mnemonicParsing="false" text="Search" />
+                        <MenuItem mnemonicParsing="false" text="Save" />
+                        <MenuItem mnemonicParsing="false" text="Print" />
+                        <SeparatorMenuItem mnemonicParsing="false" />
+                        <MenuItem mnemonicParsing="false" text="Log Out" />
+                        <MenuItem fx:id="mniClose" mnemonicParsing="false" onAction="#closeStage" text="Quit" />
+                     </items>
+                  </Menu>
+                  <Menu mnemonicParsing="false" text="Help">
+                     <items>
+                        <MenuItem mnemonicParsing="false" text="About" />
+                     </items>
+                  </Menu>
+               </menus>
+            </MenuBar>
+         </top>
+         <bottom>
+            <HBox spacing="10.0" BorderPane.alignment="CENTER">
+               <children>
+                  <Region />
+                  <Label text="Status" />
+               </children>
+               <padding>
+                  <Insets right="10.0" />
+               </padding>
+            </HBox>
+         </bottom>
+         <center>
+            <SplitPane dividerPositions="0.29797979797979796" prefHeight="370.0" prefWidth="600.0" BorderPane.alignment="CENTER">
+               <items>
+                  <AnchorPane maxWidth="300.0" minWidth="300.0" prefWidth="300.0">
+                     <children>
+                        <Label layoutX="10.0" layoutY="7.0" prefHeight="15.0" prefWidth="60.0" text="Stream:" AnchorPane.leftAnchor="10.0" AnchorPane.topAnchor="10.0" />
+                        <Label layoutX="10.0" layoutY="53.0" prefHeight="15.0" prefWidth="50.0" text="Node:" AnchorPane.leftAnchor="10.0" AnchorPane.topAnchor="60.0" />
+                        <Label layoutX="20.0" layoutY="63.0" prefHeight="15.0" prefWidth="50.0" text="Details:" AnchorPane.leftAnchor="10.0" AnchorPane.topAnchor="110.0" />
+                        <ToggleButton fx:id="tglButton" layoutX="159.0" layoutY="455.0" mnemonicParsing="false" text="ToggleButton" visible="false" />
+                        <MyComboBox fx:id="cmbStream" layoutX="109.0" layoutY="35.0" onAction="#load_cmbNode" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="25.0" />
+                        <MyComboBox fx:id="cmbNode" layoutX="10.0" layoutY="85.0" onAction="#load_lstDetails" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="75.0" />
+                        <MyListView fx:id="lstDetailsNames" layoutX="9.0" layoutY="127.0" prefHeight="320.0" prefWidth="140.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="150.0" AnchorPane.topAnchor="127.0" />
+                        <MyListView fx:id="lstDetailsValues" layoutX="152.0" layoutY="127.0" prefHeight="320.0" prefWidth="140.0" AnchorPane.leftAnchor="152.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="127.0" />
+                     </children>
+                  </AnchorPane>
+                  <AnchorPane prefWidth="400.0">
+                     <children>
+                        <GoogleMapView fx:id="googleMapView" layoutX="-128.0" layoutY="-76.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                     </children>
+                  </AnchorPane>
+               </items>
+            </SplitPane>
+         </center>
+      </BorderPane>
+   </children>
+</AnchorPane>

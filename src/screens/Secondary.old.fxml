@@ -1,0 +1,204 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import javafx.scene.chart.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="540.0" prefWidth="960.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <BorderPane layoutX="-100.0" layoutY="-152.0" prefHeight="200.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <top>
+            <MenuBar BorderPane.alignment="CENTER">
+               <menus>
+                  <Menu mnemonicParsing="false" text="File">
+                     <items>
+                        <MenuItem mnemonicParsing="false" text="New" />
+                        <MenuItem mnemonicParsing="false" text="Open…" />
+                        <Menu mnemonicParsing="false" text="Open Recent" />
+                        <SeparatorMenuItem mnemonicParsing="false" />
+                        <MenuItem mnemonicParsing="false" text="Close" />
+                        <MenuItem mnemonicParsing="false" text="Save" />
+                        <MenuItem mnemonicParsing="false" text="Save As…" />
+                        <MenuItem mnemonicParsing="false" text="Revert" />
+                        <SeparatorMenuItem mnemonicParsing="false" />
+                        <MenuItem mnemonicParsing="false" text="Preferences…" />
+                        <SeparatorMenuItem mnemonicParsing="false" />
+                        <MenuItem mnemonicParsing="false" text="Quit" />
+                     </items>
+                  </Menu>
+                  <Menu mnemonicParsing="false" text="Edit">
+                     <items>
+                        <MenuItem mnemonicParsing="false" text="Undo" />
+                        <MenuItem mnemonicParsing="false" text="Redo" />
+                        <SeparatorMenuItem mnemonicParsing="false" />
+                        <MenuItem mnemonicParsing="false" text="Cut" />
+                        <MenuItem mnemonicParsing="false" text="Copy" />
+                        <MenuItem mnemonicParsing="false" text="Paste" />
+                        <MenuItem mnemonicParsing="false" text="Delete" />
+                        <SeparatorMenuItem mnemonicParsing="false" />
+                        <MenuItem mnemonicParsing="false" text="Select All" />
+                        <MenuItem mnemonicParsing="false" text="Unselect All" />
+                     </items>
+                  </Menu>
+                  <Menu mnemonicParsing="false" text="Help">
+                     <items>
+                        <MenuItem mnemonicParsing="false" text="About MyHelloApp" />
+                     </items>
+                  </Menu>
+               </menus>
+            </MenuBar>
+         </top>
+         <bottom>
+            <HBox spacing="10.0" BorderPane.alignment="CENTER">
+               <children>
+                  <Region />
+                  <Label text="Status" />
+               </children>
+               <padding>
+                  <Insets right="10.0" />
+               </padding>
+            </HBox>
+         </bottom>
+         <center>
+            <SplitPane dividerPositions="0.29797979797979796" prefHeight="160.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+              <items>
+                <AnchorPane maxWidth="300.0" minWidth="300.0" prefWidth="300.0">
+                     <children>
+                        <VBox prefHeight="200.0" prefWidth="100.0" spacing="25.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                           <children>
+                              <HBox prefHeight="100.0" prefWidth="200.0">
+                                 <children>
+                                    <VBox prefHeight="200.0" prefWidth="100.0" spacing="5.0" HBox.hgrow="ALWAYS">
+                                       <children>
+                                          <Label text="Select Display Interval :" />
+                                          <HBox prefHeight="100.0" prefWidth="200.0">
+                                             <children>
+                                                <VBox prefHeight="169.0" prefWidth="190.0" spacing="10.0">
+                                                   <children>
+                                                      <RadioButton fx:id="rtbnTime" mnemonicParsing="false" prefHeight="18.0" prefWidth="135.0" selected="true" text="Time Interval :">
+                                                         <toggleGroup>
+                                                            <ToggleGroup fx:id="rbgDisplayMode" />
+                                                         </toggleGroup></RadioButton>
+                                                      <Region prefHeight="97.0" prefWidth="132.0" />
+                                                      <Separator>
+                                                         <VBox.margin>
+                                                            <Insets left="25.0" />
+                                                         </VBox.margin>
+                                                      </Separator>
+                                                      <RadioButton fx:id="rbtnDate" maxHeight="18.0" minHeight="18.0" mnemonicParsing="false" prefHeight="18.0" prefWidth="136.0" text="Date Interval :" toggleGroup="$rbgDisplayMode" />
+                                                   </children>
+                                                </VBox>
+                                                <VBox layoutX="10.0" layoutY="10.0" prefHeight="171.0" prefWidth="202.0" spacing="10.0">
+                                                   <children>
+                                                      <RadioButton id="1" fx:id="rbtn1hr" mnemonicParsing="false" selected="true" text="1 hour">
+                                                         <toggleGroup>
+                                                            <ToggleGroup fx:id="rbgTimeInterval" />
+                                                         </toggleGroup>
+                                                      </RadioButton>
+                                                      <RadioButton id="2" fx:id="rbtn2hr" layoutX="10.0" layoutY="36.0" mnemonicParsing="false" text="2 hours" toggleGroup="$rbgTimeInterval" />
+                                                      <RadioButton id="3" fx:id="rbtn6hr" layoutX="10.0" layoutY="64.0" mnemonicParsing="false" text="6 hours" toggleGroup="$rbgTimeInterval" />
+                                                      <RadioButton id="4" fx:id="rbtn12hr" layoutX="10.0" layoutY="92.0" mnemonicParsing="false" text="12 hours" toggleGroup="$rbgTimeInterval" />
+                                                      <RadioButton id="5" fx:id="rbtn24hr" layoutX="10.0" layoutY="120.0" mnemonicParsing="false" text="24 hours" toggleGroup="$rbgTimeInterval" />
+                                                      <Separator prefWidth="200.0" VBox.vgrow="NEVER">
+                                                         <VBox.margin>
+                                                            <Insets right="25.0" />
+                                                         </VBox.margin>
+                                                      </Separator>
+                                                      <DatePicker fx:id="dpStartDate" prefHeight="25.0" prefWidth="120.0" promptText="Start" />
+                                                      <DatePicker fx:id="dpEndDate" layoutX="10.0" layoutY="163.0" prefHeight="25.0" prefWidth="120.0" promptText="End" />
+                                                   </children>
+                                                </VBox>
+                                             </children>
+                                             <padding>
+                                                <Insets left="10.0" />
+                                             </padding>
+                                             <VBox.margin>
+                                                <Insets left="10.0" />
+                                             </VBox.margin>
+                                          </HBox>
+                                       </children>
+                                    </VBox>
+                                 </children>
+                              </HBox>
+                              <HBox alignment="CENTER" prefHeight="48.0" prefWidth="295.0">
+                                 <children>
+                                    <Button fx:id="btnViewImage" alignment="CENTER" mnemonicParsing="false" text="Realtime View" />
+                                 </children>
+                              </HBox>
+                              <HBox layoutX="15.0" layoutY="30.0" prefHeight="100.0" prefWidth="200.0">
+                                 <children>
+                                    <VBox prefHeight="200.0" prefWidth="100.0" spacing="5.0" HBox.hgrow="ALWAYS">
+                                       <children>
+                                          <Label text="Select Mode of Prediction:" />
+                                          <HBox prefHeight="100.0" prefWidth="200.0">
+                                             <children>
+                                                <VBox layoutX="10.0" layoutY="10.0" spacing="10.0" HBox.hgrow="NEVER">
+                                                   <children>
+                                                      <RadioButton mnemonicParsing="false" selected="true" text="Linear Regression">
+                                                         <toggleGroup>
+                                                            <ToggleGroup fx:id="rbgPrediction" />
+                                                         </toggleGroup>
+                                                      </RadioButton>
+                                                      <RadioButton layoutX="10.0" layoutY="10.0" mnemonicParsing="false" text="Logistic Regression" toggleGroup="$rbgPrediction" />
+                                                      <RadioButton layoutX="10.0" layoutY="28.0" mnemonicParsing="false" text="Gaussian Model Prediction" toggleGroup="$rbgPrediction" />
+                                                      <RadioButton layoutX="10.0" layoutY="46.0" mnemonicParsing="false" text="Neuro-Fuzzy Model Prediction" toggleGroup="$rbgPrediction" />
+                                                      <RadioButton layoutX="10.0" layoutY="64.0" mnemonicParsing="false" text="AI Model Prediction" toggleGroup="$rbgPrediction" />
+                                                   </children>
+                                                </VBox>
+                                             </children>
+                                             <VBox.margin>
+                                                <Insets left="10.0" />
+                                             </VBox.margin>
+                                             <padding>
+                                                <Insets left="10.0" />
+                                             </padding>
+                                          </HBox>
+                                       </children>
+                                    </VBox>
+                                 </children>
+                              </HBox>
+                           </children>
+                           <padding>
+                              <Insets left="5.0" top="10.0" />
+                           </padding>
+                        </VBox>
+                     </children></AnchorPane>
+                <AnchorPane minHeight="0.0" prefHeight="160.0">
+                     <children>
+                        <VBox AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                           <children>
+                              <TabPane fx:id="tabPane" maxHeight="30.0" minHeight="30.0" tabClosingPolicy="UNAVAILABLE" tabMaxWidth="250.0" tabMinWidth="100.0">
+                                <tabs>
+                                    <Tab fx:id="wLvlTab" text="Water Level" />
+                                    <Tab fx:id="rainTab" text="Rain Intensity" />
+                                    <Tab fx:id="wSpdTab" text="Wind Speed" />
+                                    <Tab fx:id="tempTab" text="Temperature" />
+                                    <Tab fx:id="rHumTab" text="Humidity" />
+                                </tabs>
+                              </TabPane>
+                              <HBox prefHeight="100.0" prefWidth="200.0" VBox.vgrow="ALWAYS">
+                                 <children>
+                                    <LineChart fx:id="lineChart" HBox.hgrow="ALWAYS">
+                                      <xAxis>
+                                        <NumberAxis side="BOTTOM" fx:id="xAxis" />
+                                      </xAxis>
+                                      <yAxis>
+                                        <NumberAxis fx:id="yAxis" side="LEFT" />
+                                      </yAxis>
+                                    </LineChart>
+                                 </children>
+                              </HBox>
+                           </children>
+                        </VBox>
+                     </children>
+                  </AnchorPane>
+              </items>
+            </SplitPane>
+         </center>
+      </BorderPane>
+   </children>
+</AnchorPane>
