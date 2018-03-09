@@ -3,6 +3,7 @@ package controllers;
 import java.awt.image.BufferedImage;
 import java.io.ByteArrayInputStream;
 import java.io.IOException;
+import java.io.UnsupportedEncodingException;
 import java.net.URL;
 import java.sql.ResultSet;
 import java.sql.SQLException;
@@ -93,19 +94,23 @@ public class ImageViewController implements Initializable {
 	private void viewImage() {
 		byte[] decodedValue = null;
 
-		// ResultSet rs = Main.db.Query("SELECT img FROM tbl_master WHERE number=" +
-		// Number);
 		ResultSet rs = Main.db.Tail("tbl_" + Number + "_sensorImg", 1);
 		try {
 			while (rs.next()) {
-				decodedValue = Base64.getDecoder().decode(rs.getBytes("img"));
+				String x = "";
+				int size = rs.getInt("size");
+				for (int i = 0; i < size; i++) {
+					x += new String(rs.getBytes("chunk" + i), "UTF-8");
+				}
+
+				decodedValue = Base64.getDecoder().decode(x.getBytes("UTF-8"));
 			}
-		} catch (SQLException e) {
+		} catch (SQLException | UnsupportedEncodingException e) {
 			e.printStackTrace();
 		}
 
 		// Display the decode image.
-		imgCanvas.setImage(blob2image(decodedValue, 600, 400));
+		imgCanvas.setImage(blob2image(decodedValue, 640, 480));
 	}
 
 }
