@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.canvas.*?>
+<?import javafx.scene.text.*?>
+<?import customControls.listView.*?>
+<?import customControls.comboBox.*?>
+<?import customControls.googleMap.*?>
+<?import javafx.scene.shape.*?>
+<?import com.lynden.gmapsfx.*?>
+<?import javafx.scene.chart.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<StackPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <ImageView fitHeight="400.0" fitWidth="600.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../res/background.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="250.0" fitWidth="300.0" pickOnBounds="true" preserveRatio="true" translateX="-10.0" StackPane.alignment="BOTTOM_RIGHT">
+         <image>
+            <Image url="@../../res/logo.png" />
+         </image>
+      </ImageView>
+      <Label text="HydroGIS" textFill="#083c66" textOverrun="CLIP" translateX="40.0" translateY="70.0" wrapText="true" StackPane.alignment="TOP_LEFT">
+         <font>
+            <Font name="Ubuntu Condensed" size="56.0" />
+         </font>
+      </Label>
+      <Label layoutX="10.0" layoutY="10.0" text="v1.0" textFill="#6d7c6e" textOverrun="CLIP" translateX="225.0" translateY="92.0" wrapText="true" StackPane.alignment="TOP_LEFT">
+         <font>
+            <Font name="Tw Cen MT Condensed" size="36.0" />
+         </font>
+      </Label>
+      <Label alignment="CENTER" text="Realtime Drainage Monitoring Dashboard" textFill="#4d4b4b" textOverrun="CLIP" translateX="40.0" translateY="135.0" wrapText="true" StackPane.alignment="TOP_LEFT">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
+      <Label alignment="CENTER" layoutX="10.0" layoutY="10.0" text="Copyright © 2017-2018 Beekun M.u.R.," textFill="#4d4b4b" textOverrun="CLIP" translateX="40.0" translateY="225.0" wrapText="true" StackPane.alignment="TOP_LEFT">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label alignment="CENTER" text="University of Mauritius" textFill="#4d4b4b" textOverrun="CLIP" translateX="40.0" translateY="245.0" wrapText="true" StackPane.alignment="TOP_LEFT">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Button fx:id="btnClose" mnemonicParsing="false" text="Button" visible="false" />
+   </children>
+</StackPane>

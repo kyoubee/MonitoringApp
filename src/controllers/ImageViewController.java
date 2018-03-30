@@ -16,6 +16,7 @@ import application.Main;
 import javafx.embed.swing.SwingFXUtils;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
+import javafx.scene.control.Slider;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.image.WritableImage;
@@ -26,6 +27,7 @@ import javafx.scene.image.WritableImage;
  *	window using a javafx.scene.image.ImageView container.
 /*/////////////////////////////////////////////////////////////////////////////
 public class ImageViewController implements Initializable {
+	@FXML Slider					imgNumber;
 	@FXML ImageView				imgCanvas;
 
 	static private String	Number;

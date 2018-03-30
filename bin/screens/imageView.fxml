@@ -1,24 +1,37 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.control.*?>
 <?import javafx.geometry.*?>
 <?import javafx.scene.image.*?>
 <?import java.lang.*?>
 <?import javafx.scene.*?>
 <?import javafx.scene.layout.*?>
 
-<AnchorPane maxHeight="337.0" maxWidth="600.0" minHeight="337.0" minWidth="600.0" prefHeight="337.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane maxHeight="450.0" maxWidth="600.0" minHeight="450.0" minWidth="600.0" prefHeight="450.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
    <children>
-      <HBox maxHeight="337.0" maxWidth="600.0" minHeight="337.0" minWidth="600.0" prefHeight="337.0" prefWidth="600.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+      <VBox alignment="TOP_CENTER" layoutX="-275.0" layoutY="-214.0" maxHeight="450.0" maxWidth="600.0" minHeight="450.0" minWidth="600.0" prefHeight="450.0" prefWidth="600.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
          <children>
-            <ImageView fx:id="imgCanvas" pickOnBounds="true" preserveRatio="true" HBox.hgrow="SOMETIMES">
-               <viewport>
-                  <Rectangle2D />
-               </viewport>
-               <HBox.margin>
-                  <Insets />
-               </HBox.margin>
-            </ImageView>
+            <HBox alignment="CENTER" maxHeight="400.0" maxWidth="600.0" minHeight="400.0" minWidth="600.0" prefHeight="400.0" prefWidth="600.0">
+               <children>
+                  <ImageView fx:id="imgCanvas" pickOnBounds="true" preserveRatio="true">
+                     <viewport>
+                        <Rectangle2D />
+                     </viewport>
+                  </ImageView>
+               </children>
+            </HBox>
+            <HBox alignment="CENTER" maxHeight="50.0" maxWidth="600.0" minHeight="50.0" minWidth="600.0" prefHeight="50.0" prefWidth="600.0">
+               <children>
+                  <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0">
+                     <children>
+                        <Label text="Image Select :" />
+                        <Region prefHeight="23.0" prefWidth="100.0" />
+                     </children>
+                  </VBox>
+                  <Slider majorTickUnit="1.0" max="5.0" minWidth="300.0" minorTickCount="0" showTickLabels="true" showTickMarks="true" snapToTicks="true" />
+               </children>
+            </HBox>
          </children>
-      </HBox>
+      </VBox>
    </children>
 </AnchorPane>
